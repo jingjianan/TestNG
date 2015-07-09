@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<parameter name="test-name" value="test" />
+<parameter name="num" value="1"/>
+<parameter name="flag" value="true"/>
+<parameter name="char" value="C"/>
+<parameter name="float" value="1.1"/>
+
+
+<test name="Test">
+  <classes>
+    <class name="parameters.NewTest2">
+    	<methods>
+    		<include name="f1"/>
+    	</methods>
+    </class>
+  </classes>
+</test> <!-- Test -->
+</suite> <!-- Suite -->

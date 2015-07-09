@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <parameter name="browsers" value="firefox" />
+  <test name="Test">
+  	<groups>
+  	  <define name="baidu"></define>
+  	  <define name="bing"></define>
+  	  <define name="so"></define>
+  	  
+  	  <define name="ff1">
+  	  	<include name="baidu"/>
+  	  	<include name="bing"/>
+  	  </define>
+  	  <define name="ff2">
+  	  	<include name="baidu"/>
+  	  	<include name="so"/>
+  	  </define>
+  	  <define name="ff3">
+  	  	<include name="bing"/>
+  	  	<include name="so"/>
+  	  </define>  	  
+  	  <run>
+  	  	<include name="browser"/>
+  	  	<include name="ff1"/>
+  	  	<include name="ff2"/>
+  	  </run>	
+  	  
+  	</groups>
+  	
+    <classes>
+      <class name="com.NewTest1">
+      	<methods>
+      		<include name="beforeMethod"/>
+      		<include name="f1"/>
+      		<include name="f2"/>
+      		<include name="f3"/>
+      		<include name="afterMethod"/>
+      	</methods>     
+      </class>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
